@@ -1,1 +1,1 @@
-# microsoft-teams-connector-interface
+# microsoft-teams-connector-dto
