@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.buraequete</groupId>
-	<artifactId>microsoft-teams-connector-dto</artifactId>
+	<artifactId>microsoft-legacy-messageCard-dto</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<java.version>1.6</java.version>
 	</properties>
 
 	<dependencies>
@@ -27,26 +27,11 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.5.4</version>
 		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.22</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.jsonschema2pojo</groupId>
-				<artifactId>jsonschema2pojo-maven-plugin</artifactId>
-				<version>0.5.1</version>
-				<configuration>
-					<sourceDirectory>${basedir}/src/main/resources/schema/adaptive-card.json</sourceDirectory>
-					<targetPackage>com.buraequete.microsoft.teams.connector.dto</targetPackage>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
